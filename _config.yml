@@ -46,12 +46,10 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Home
-    url:               /home/
   - title:             Blog
     url:               /blog/
   - title:             Programming
-    url:               /programming/
+    url:               /hyde/
   - title:             Talks
     url:               /talks/
 
