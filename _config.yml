@@ -25,12 +25,10 @@ title:                 Tuan Dinh
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
   "My humble shelter for knowledge sharing".
-  **Hydejack** is your presence on the web, featuring a blog, portfolio, and resume.
 
 # A shorter description for the sidebar.
 tagline:               >
-  "Best Jekyll Theme by a Mile".
-  Open `_config.yml` to edit this text.
+ ""
 
 # A list of keywords for your blog
 keywords:              []
@@ -38,7 +36,7 @@ keywords:              []
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /assets/icons/icon.png
+logo:                  /assets/icons/bio-photo.jpg
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
