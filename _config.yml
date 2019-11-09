@@ -49,7 +49,7 @@ menu:
   - title:             Blog
     url:               /blog/
   - title:             Programming
-    url:               /hyde/
+    url:               /programming/
   - title:             Talks
     url:               /talks/
 
