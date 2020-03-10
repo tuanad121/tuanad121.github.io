@@ -8,7 +8,8 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    Current graduate research assistant at OHSU. Versatile, reliable and efficient with 5+ year experience applying machine learning in style transformation, voice conversion, speech synthesis, and speech enhancement. 
+    - Have experiences in applying machine learning algorithms to speech processing. 
+    - Apply hidden Markov model, deep neural network, generative adversarial model, variational autoencoder to speech coding, speech intelligibility improvement, style conversion, voice conversion, and speech synthesis. 
 
   # This photo will be used in the about section
   picture:
