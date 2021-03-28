@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Using a Manifold Vocoder for Spectral Voice and Style Conversion</title>
+</head>
+<body>
+<p>
+<h2>
+Using a Manifold Vocoder for Spectral Voice and Style Conversion
+</h2>
+</p>
+<h3>Tuan Dinh, Alexander Kain, Kris Tjaden</h3>
+<p>
+    We propose a new type of spectral feature that is both compact and interpolable, and thus ideally suited for regression approaches that involve averaging.
+    The feature is realized by means of a speaker-independent variational autoencoder (VAE), which learns a latent space based on the low-dimensional manifold of high-resolution speech spectra.
+    In vocoding experiments, we showed that using a 12-dimensional VAE feature (VAE-12) resulted in significantly better perceived speech quality compared to a 12-dimensional MCEP feature.
+    In voice conversion experiments, using VAE-12 resulted in significantly better perceived speech quality as compared to 40-dimensional MCEPs, with similar speaker accuracy.
+    In habitual to clear style conversion experiments, we significantly improved the speech intelligibility for one of three speakers, using a custom skip connection deep neural network, with the average keyword recall accuracy increasing from 24% to 46%.
+</p>
+
+<p><a href="https://www.isca-speech.org/archive/Interspeech_2019/pdfs/1176.pdf">Download paper</a></p>
+<p><a href="https://github.com/tuanad121/Python-WORLD">Download model</a></p>
+
+<p>
+<h3>Experiment: Vocoding Performance</h3>
+<p>Evaluate the efficacy of VAE-12 in vocoding</p>
+    <table style="width:100%">
+    <thead>
+    <tr>
+        <th>
+            Speaker
+        </th>
+        <th>
+        LSF vocoding
+        </th>
+        <th>
+        MCEP vocoding
+        </th>
+        <th>
+        VAE vocoding
+        </th>
+        <th>
+        Natural Speech
+        </th>
+
+    </tr>
+    </thead>
+        <tbody>
+        <tr>
+            <td><strong>SF1</strong>: female</td>
+            <td><audio controls><source src="../wav/VOD/SF1_100006_lsf.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/VOD/SF1_100006_mcep.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/VOD/SF1_100006_vae.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/VOD/SF1_100006_nat.wav" type="audio/mpeg"></audio></td>
+        </tr>
+        <tr>
+            <td><strong>SM2</strong>: male</td>
+            <td><audio controls><source src="../wav/VOD/SM2_100006_lsf.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/VOD/SM2_100006_mcep.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/VOD/SM2_100006_vae.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/VOD/SM2_100006_nat.wav" type="audio/mpeg"></audio></td>
+        </tr>
+
+        </tbody>
+    </table>
+</p>
+
+<p>
+<h3>Experiment: Voice Conversion</h3>
+<p>Evaluate the efficacy of VAE-12 in voice conversion</p>
+    <table style="width:100%">
+    <thead>
+    <tr>
+        <th>
+        Source
+        </th>
+        <th>
+        LSF mapping
+        </th>
+        <th>
+        MCEP-12 mapping
+        </th>
+        <th>
+        MCEP-40 mapping
+        </th>
+        <th>
+        VAE mapping
+        </th>
+        <th>
+        Target
+        </th>
+
+    </tr>
+    </thead>
+        <tbody>
+        <tr>
+            <td><audio controls><source src="../wav/F2F/SF1_100033_nat.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/F2F/SF1-TF1_100033_lsf.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/F2F/SF1-TF1_100033_mcep.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/F2F/SF1-TF1_100033_mcep_40.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/F2F/SF1-TF1_100033_vae.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/F2F/TF1_100033_nat.wav" type="audio/mpeg"></audio></td>
+        </tr>
+        <tr>
+            <td><audio controls><source src="../wav/F2M/SF1_100125_nat.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/F2M/SF1-TM1_100125_lsf.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/F2M/SF1-TM1_100125_mcep.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/F2M/SF1-TM1_100125_mcep_40.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/F2M/SF1-TM1_100125_vae.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/F2M/TM1_100125_nat.wav" type="audio/mpeg"></audio></td>
+        </tr>
+        <tr>
+            <td><audio controls><source src="../wav/M2F/SM2_100067_nat.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/M2F/SM2-TF1_100067_lsf.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/M2F/SM2-TF1_100067_mcep.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/M2F/SM2-TF1_100067_mcep_40.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/M2F/SM2-TF1_100067_vae.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/M2F/TF1_100067_nat.wav" type="audio/mpeg"></audio></td>
+        </tr>
+        <tr>
+            <td><audio controls><source src="../wav/M2M/SM2_100148_nat.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/M2M/SM2-TM1_100148_lsf.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/M2M/SM2-TM1_100148_mcep.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/M2M/SM2-TM1_100148_mcep_40.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/M2M/SM2-TM1_100148_vae.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/M2M/TM1_100148_nat.wav" type="audio/mpeg"></audio></td>
+        </tr>
+
+        </tbody>
+    </table>
+</p>
+
+<p>
+<h3>Experiment: Style Conversion</h3>
+<p>Evaluate the efficacy of VAE-12 in Style Conversion for Intelligibility Improvement</p>
+    <table style="width:100%">
+    <thead>
+    <tr>
+        <th>
+            Habitual speech
+        </th>
+        <th>
+        DNN mapping
+        </th>
+        <th>
+        proposed DNN mapping
+        </th>
+        <th>
+        Oracle
+        </th>
+        <th>
+        Clear Speech
+        </th>
+
+    </tr>
+    </thead>
+        <tbody>
+        <tr>
+            <td><audio controls><source src="../wav/SC/PD_M6_05_H-vod-vae.wav" type="audio/mpeg"></td>
+            <td><audio controls><source src="../wav/SC/PD_M6_05_dnn_vae.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/SC/PD_M6_05_vae-res-spk-dpn.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/SC/PD_M6_05_oracle.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/SC/PD_M6_05_C-vod-vae.wav" type="audio/mpeg"></audio></td>
+        </tr>
+
+
+        </tbody>
+    </table>
+</p>
+
+</body>
+</html>
