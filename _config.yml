@@ -50,8 +50,8 @@ menu:
     url:               /blog/
   - title:             Programming
     url:               /programming/
-  - title:             Talks
-    url:               /talks/
+  - title:             Samples
+    url:               /samples/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
