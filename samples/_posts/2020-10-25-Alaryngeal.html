@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Increasing the Intelligibility and Naturalness of Alaryngeal Speech Using Voice Conversion and Synthetic Fundamental Frequency</title>
+</head>
+<body>
+<p>
+<h2>
+Increasing the Intelligibility and Naturalness of Alaryngeal Speech Using Voice Conversion and Synthetic Fundamental Frequency
+</h2>
+</p>
+<h3>Tuan Dinh, Alexander Kain, Robin Samlan, Beiming Cao, Jun Wang</h3>
+<p>
+    Individuals  who  undergo  a  laryngectomy  lose  their  ability  to phonate.
+    Yet current treatment options allow alaryngeal speech,they struggle in their daily communication and social life due to the low intelligibility of their speech.
+    In this paper, we presentedtwo conversion methods for increasing intelligibility and naturalness of speech produced by laryngectomees (LAR).
+    The first method used a deep neural network for predicting binary voicing/unvoicing or the degree of aperiodicity.
+    The second methodused a conditional generative adversarial network to learn the mapping from LAR speech spectra to clearly-articulated speech spectra.
+    We also created a synthetic fundamental frequency trajectory with an intonation model consisting of phrase and accent curves.
+    For the two conversion methods, we showed that adaptation always increased the performance of pre-trained models,objectively.
+    In subjective testing involving four LAR speakers,we significantly improved the naturalness of two speakers, andwe also significantly improved the intelligibility of one speaker.
+</p>
+
+<p><a href="https://www.isca-speech.org/archive/Interspeech_2020/pdfs/1196.pdf">Download paper</a></p>
+
+<p>
+<h3>LAR-to-CLR Conversion</h3>
+<p>We convert alaryngeal speech to clearly-spoken speech</p>
+    <table style="width:100%">
+    <thead>
+    <tr>
+        <th>
+            Speaker
+        </th>
+        <th>
+        Alaryngeal Speech
+        </th>
+        <th>
+        Predict Voicing
+        </th>
+        <th>
+        Predict Voicing & Spectrum
+        </th>
+        <th>
+        Predict Spectrum
+        </th>
+        <th>
+        Clearly Spoken Speech
+        </th>
+    </tr>
+    </thead>
+        <tbody>
+        <tr>
+            <td><strong>DL001</strong>: TEP</td>
+            <td><audio controls><source src="../wav/alaryngeal/DL001_107_vod.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/alaryngeal/DL001_107_F0-VUV-AP.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/alaryngeal/DL001_107_F0-VUV-AP-MCEP.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/alaryngeal/DL001_107_MCEP.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/alaryngeal/107.wav" type="audio/mpeg"></audio></td>
+        </tr>
+        <tr>
+            <td><strong>DL004</strong>: ELX</td>
+            <td><audio controls><source src="../wav/alaryngeal/DL004_107_vod.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/alaryngeal/DL004_107_F0-VUV-AP.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/alaryngeal/DL004_107_F0-VUV-AP-MCEP.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/alaryngeal/DL004_107_MCEP.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/alaryngeal/107.wav" type="audio/mpeg"></audio></td>
+        </tr>
+        <tr>
+            <td><strong>L006</strong>: TEP</td>
+            <td><audio controls><source src="../wav/alaryngeal/L006_075_vod.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/alaryngeal/L006_075_F0-VUV-AP.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/alaryngeal/L006_075_F0-VUV-AP-MCEP.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/alaryngeal/L006_075_MCEP.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/alaryngeal/075.wav" type="audio/mpeg"></audio></td>
+        </tr>
+        </tbody>
+    </table>
+</p>
+
+</body>
+</html>
