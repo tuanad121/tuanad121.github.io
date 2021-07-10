@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Towards Duration Style Conversion</title>
+</head>
+<body>
+<p>
+<h2>
+Towards Duration Style Conversion
+</h2>
+</p>
+<h3>Tuan Dinh</h3>
+<p>
+    Preliminary results of improving speech intelligibility using duration conversion.
+    We use phase vocoder to convert duration of habitual to slow speech uniformly or non-uniformly.
+    Uniform modification applies a single sentence-level scaling factor on habitual speech.
+    Non-uniform modification applies multiple phoneme-level scaling factors on habitual speech.
+    We assume these scaling factors are available.
+    We also assume phoneme labels and boundaries are available in non-uniform modification.
+    The goal is to determine whether non-uniform modification is better than uniform modification.
+</p>
+
+
+<p>
+<h3>Non-uniform vs uniform modificaiton</h3>
+
+    <table style="width:100%">
+    <thead>
+    <tr>
+        <th>
+        Habitual Speech
+        </th>
+        <th>
+        non-uniform modification
+        </th>
+        <th>
+        uniform modification
+        </th>
+        <th>
+        Slow speech
+        </th>
+
+    </tr>
+    </thead>
+        <tbody>
+        <tr>
+            <td><audio controls><source src="../wav/duration/30-H-04.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/duration/30-HtoS-04-nonUniform.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/duration/30-HtoS-04-uniform.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/duration/30-HtoS-04-vocoding.wav" type="audio/mpeg"></audio></td>
+        </tr>
+        <tr>
+            <td><audio controls><source src="../wav/duration/30-H-05.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/duration/30-HtoS-05-nonUniform.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/duration/30-HtoS-05-uniform.wav" type="audio/mpeg"></audio></td>
+            <td><audio controls><source src="../wav/duration/30-HtoS-05-vocoding.wav" type="audio/mpeg"></audio></td>
+        </tr>
+        </tbody>
+    </table>
+</p>
+
+
+</body>
+</html>
